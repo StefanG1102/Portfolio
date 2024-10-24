@@ -8,6 +8,20 @@ import { HeaderComponent } from './header/header.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { DarkModeToggleComponent } from './dark-mode-toggle/dark-mode-toggle.component';
 import { ResumeComponent } from './resume/resume.component';
+import { ImprintComponent } from './imprint/imprint.component';
+import { ContactComponent } from './contact/contact.component';
+import {RouterModule, Routes} from "@angular/router";
+
+const appRoutes: Routes = [
+  { path: '', component: HomepageComponent }, // Default route
+  { path: 'Lebenslauf', component: ResumeComponent },
+  { path: 'Kontakt', component: ContactComponent },
+  {path: 'Impressum', component: ImprintComponent },
+  { path: '**', redirectTo: '' } // Optional: Redirect any unknown paths to homepage
+
+
+  // Add more routes as needed
+];
 
 @NgModule({
   declarations: [
@@ -16,11 +30,17 @@ import { ResumeComponent } from './resume/resume.component';
     HeaderComponent,
     HomepageComponent,
     DarkModeToggleComponent,
-    ResumeComponent
+    ResumeComponent,
+    ImprintComponent,
+    ContactComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(appRoutes),
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
