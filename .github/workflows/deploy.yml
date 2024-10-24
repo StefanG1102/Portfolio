@@ -17,6 +17,9 @@ jobs:
         with:
           node-version: '16' # Use your desired Node.js version
 
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli
+
       - name: Install dependencies
         run: |
           cd portfolioFrontend
