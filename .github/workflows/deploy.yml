@@ -15,7 +15,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18'  # Update to at least v18.19
+          node-version: '18'  # Ensure you're using a compatible Node.js version
 
       - name: Install Angular CLI
         run: npm install -g @angular/cli
@@ -28,7 +28,7 @@ jobs:
       - name: Build
         run: |
           cd portfolioFrontend
-          ng build --prod --base-href /Portfolio/
+          ng build --configuration production --base-href /Portfolio/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
