@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body {
+  @apply bg-[#fffbf7] text-customBlack; /* Light mode styles */
+}
+
+body.dark {
+  @apply bg-[#252525] text-customWhite; /* Dark mode styles */
+}
+
+.sectionColor {
+  background-color: #37363D; /* Background color for sections */
+}
+
+.darkmodeColor {
+  background-color: #37363D; /* Dark mode background color */
+}
+
+.text-white {
+  color: #fffbf7; /* Custom white text color */
+}

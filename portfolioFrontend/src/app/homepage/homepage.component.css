@@ -1,0 +1,9 @@
+.texth1{
+  color: #232425;
+
+}
+
+img {
+  transition: opacity 0.3s ease; /* Smooth transition for opacity change */
+}
+
