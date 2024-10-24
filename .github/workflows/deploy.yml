@@ -8,9 +8,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    permissions:  # This grants necessary permissions
-      contents: write  # Allow writing to the repository
-      pages: write     # Allow writing to GitHub Pages
+    permissions:
+      contents: write
+      pages: write
 
     steps:
       - name: Checkout code
@@ -19,7 +19,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18'  # Ensure using the correct Node.js version
+          node-version: '18'
 
       - name: Install Angular CLI
         run: npm install -g @angular/cli
@@ -37,6 +37,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}  # Use the GitHub token for authentication
-          publish_dir: ./portfolioFrontend/dist/portfolio  # Ensure this path is correct
-          publish_branch: gh-pages  # Branch where files will be published
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./portfolioFrontend/dist/portfolio-frontend  # Correct this path
+          publish_branch: gh-pages
