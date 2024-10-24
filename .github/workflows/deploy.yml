@@ -32,7 +32,7 @@ jobs:
       - name: Build
         run: |
           cd portfolioFrontend
-          ng build --configuration production --base-href /Portfolio/
+          ng build --configuration production --base-href /portfolio-frontend/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
