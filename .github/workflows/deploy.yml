@@ -15,7 +15,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18'  # Ensure you're using a compatible Node.js version
+          node-version: '18'
 
       - name: Install Angular CLI
         run: npm install -g @angular/cli
@@ -36,3 +36,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./portfolioFrontend/dist/portfolio
           publish_branch: gh-pages
+          
+      permissions:  # Add this section
+        contents: write  # This grants write permission to the repository
