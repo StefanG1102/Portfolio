@@ -1,22 +1,5 @@
 import { Component } from '@angular/core';
 
-interface Skill {
-  name: string;
-  level: number; // 0 to 100
-}
-
-interface Project {
-  title: string;
-  description: string;
-  link: string;
-}
-
-interface Experience {
-  title: string;
-  company: string;
-  period: string;
-  description: string;
-}
 
 @Component({
   selector: 'app-resume',
@@ -25,50 +8,30 @@ interface Experience {
 })
 export class ResumeComponent {
   name: string = 'Stefan Ganswint';
-  tagline: string = 'Aspiring IT Professional & Web Developer';
-  skills: Skill[] = [
-    { name: 'HTML', level: 90 },
-    { name: 'CSS', level: 80 },
-    { name: 'JavaScript', level: 75 },
-    { name: 'Angular', level: 70 },
-    { name: 'TypeScript', level: 70 },
-    { name: 'Git', level: 90 },
-  ];
-  projects: Project[] = [
-    {
-      title: 'Project 1',
-      description: 'Description of Project 1.',
-      link: 'https://example.com/project1',
-    },
-    {
-      title: 'Project 2',
-      description: 'Description of Project 2.',
-      link: 'https://example.com/project2',
-    },
-    {
-      title: 'Project 3',
-      description: 'Description of Project 3.',
-      link: 'https://example.com/project3',
-    },
-  ];
   experience: any[] = [
     {
-      title: 'Front-End Developer',
-      company: 'Tech Company',
-      period: 'Jan 2023 - Present',
-      description: 'Developed user-friendly web applications using Angular and TypeScript. Collaborated with designers to enhance UI/UX.'
+      title: 'Studium Social Media Systems',
+      company: 'Technische Hoschschule Mittelhessen Gießen',
+      period: '2020 - Heute',
+      description: 'Ausgebildet in BWL, Grundlagen und Anwendung von Social Media und Vertieft in der IT'
     },
     {
-      title: 'Intern Web Developer',
-      company: 'Another Company',
-      period: 'Jun 2022 - Dec 2022',
-      description: 'Assisted in developing and maintaining client websites. Gained experience with HTML, CSS, and JavaScript.'
+      title: 'Tutor für Webbasierte Programmierung',
+      company: 'Technische Hoschschule Mittelhessen Gießen',
+      period: '2022 - Heute',
+      description: 'Unterstützung der Studierenden bei Fragen zu ihren Abgaben und das finden von Lösungen bei unterschiedlichen Fehlern'
     },
     {
-      title: 'Freelance Developer',
-      company: 'Self-Employed',
-      period: 'Jan 2021 - May 2022',
-      description: 'Completed multiple projects for clients, including websites and web applications. Focused on delivering high-quality code and design.'
+      title: 'Reinigungskraft',
+      company: 'WISAG',
+      period: '2020 - 2022',
+      description: 'Reinigung von Büros, Toiletten und Aufenthaltsräumen'
+    },
+    {
+      title: 'Breakdance Lehrer',
+      company: 'Souldance Studio Alsfeld',
+      period: '2018 -  2022',
+      description: 'Unterrichten von Kindern und Jugendlichen in der akkrobatischen Tanzart Breakdance. Eigenständige Unterrichts und Choreographie Planung'
     },
   ];
 }
