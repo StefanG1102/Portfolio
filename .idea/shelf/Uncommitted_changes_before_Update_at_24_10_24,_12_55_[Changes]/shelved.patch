@@ -1,0 +1,18 @@
+Index: portfolioFrontend/src/app/app.component.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/portfolioFrontend/src/app/app.component.html b/portfolioFrontend/src/app/app.component.html
+--- a/portfolioFrontend/src/app/app.component.html	(revision 1f67e5202bc7a3891a20ae6607979b4db4568fdf)
++++ b/portfolioFrontend/src/app/app.component.html	(date 1729767342169)
+@@ -1,0 +1,9 @@
++<div class="flex flex-col min-h-screen">
++  <app-header></app-header>
++
++  <main class="flex-grow">
++    <router-outlet></router-outlet>
++  </main>
++
++  <app-footer></app-footer>
++</div>
